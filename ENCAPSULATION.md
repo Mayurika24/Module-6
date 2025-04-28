@@ -26,14 +26,31 @@ To write a Python program to create a class `Student` with the private members `
 ### PROGRAM
 
 ```
+class Student:
+    def __init__(self, name, age):
+        # private member
+        self.name = name
+        self.__age = age
+    def get_name(self):
+        return self.name
+    def set_name(self,n):
+        self.name=n
+    def get_age(self):
+        return self.__age
+    def set_age(self,a):
+        self.__age=a
+    
+stud = Student('Jessa', 14)
 
-
-
+print('Name:', stud.name, stud.get_age())
+stud.set_age(16)
+print('Name:', stud.name, stud.get_age())
 ```
 
 ### OUTPUT
 
+![image](https://github.com/user-attachments/assets/3e6dcfcc-bc95-4986-8ff8-56fba90ab5b8)
 
 ### RESULT
 
-
+Thus a Python program to create a class `Student` with the private members `name` and `age`, and add getter and setter methods to initialize and modify the `age` variable was executed and implemented successfully.
